@@ -1,0 +1,26 @@
+<?php
+return [
+    'settings' => [
+        // Slim Settings
+        'determineRouteBeforeAppMiddleware' => false,
+        'displayErrorDetails' => false,
+        'doctrine' => [
+            'meta' => [
+                'entity_path' => [
+                    'app/src/Entity'
+                ],
+                'auto_generate_proxies' => true,
+                'proxy_dir' =>  __DIR__.'/../cache/proxies',
+                'cache' => null,
+            ],
+            'connection' => [
+                'driver'   => 'pdo_mysql',
+                'host'     => 'localhost',
+                'dbname'   => 'doctrineTest',
+                'user'     => 'root',
+                'password' => '',
+            ]
+            ]
+    ]
+
+];
